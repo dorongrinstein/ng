@@ -1,0 +1,12 @@
+
+version: '2'
+
+services:
+    app:
+        build: app
+
+    proxy:
+        build: proxy
+        ports:
+            - "9443:443"
+            - "9080:80"
